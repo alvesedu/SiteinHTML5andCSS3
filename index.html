@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>Hero Travel</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- inserindo icons no html -->
+    <link href="style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <p>Travel Hero</p>
+            <ul>
+                <li>Home</li>
+                <li>Pacotes</li>
+                <li>Serviços</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+
+        <div class="header-content">
+            <h1>Monte Fuji</h1>
+            <p>Conheça este monte e as suas belezas, venham conosco. Embarque nessa experiência!</p>
+            <button>Saiba mais...</button>
+        </div>
+    </header>
+
+    <section class="pacotes">
+        <h2 class="pacotes-title">Conheça nossos pacotes.</h2>
+
+        <div class="pacotes-cards">
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>Promoção</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>R$ 1.500,00</p>
+                </div>
+
+                <img class="card-image" src="assets/card.jpg" alt="Miami-Beach" />
+                <div class="card-content">
+                    <h2>Pacote 5 noites hotel premium</h2>
+                    <ul>
+                        <li> <i data-feather="coffee"></i> Café da manhã incluso</li>
+                        <li> <i data-feather="wifi"></i> Wifi</li>
+                        <li> <i data-feather="key"></i> Pet friendly</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>Promoção</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>R$ 1.950,00</p>
+                </div>
+
+                <img class="card-image" src="assets/card2.jpg" alt="Russia" />
+                <div class="card-content">
+                    <h2>Pacote 4 noites em Moscou</h2>
+                    <ul>
+                        <li> <i data-feather="coffee"></i> Café da manhã incluso</li>
+                        <li> <i data-feather="wifi"></i> Wifi</li>
+                        <li> <i data-feather="key"></i> Pet friendly</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="card-tag card-tag-top">
+                    <p>Promoção</p>
+                </div>
+
+                <div class="card-tag card-tag-bottom">
+                    <p>R$ 1.000,00</p>
+                </div>
+
+                <img class="card-image" src="assets/card3.jpg" alt="Pará" />
+                <div class="card-content">
+                    <h2>Pacote 3 noites em Alter do Chão</h2>
+                    <ul>
+                        <li> <i data-feather="coffee"></i> Café da manhã incluso</li>
+                        <li> <i data-feather="wifi"></i> Wifi</li>
+                        <li> <i data-feather="key"></i> Pet friendly</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="servico">
+        <h3 class="servico-title">Serviços</h3>
+        <div class="servico-cards">
+            <div class="card">
+                <i data-feather="map"></i>
+                <div class="card-content">
+                    <h3>Tour guiados</h3>
+                    <p>Tour guiados, são passeios realizados auxilio de guias, além dá informações sobre o local nos conduz durante o trajeto.
+                    </p>
+                </div>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="card">
+                <i data-feather="camera"></i>
+                <div class="card-content">
+                    <h3>Fotos Profissionais</h3>
+                    <p>Nossos fotografos estão habituados a registrar os melhores momentos da sua viagem para você aproveitar as paisangens.
+                    </p>
+                </div>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="card">
+                <i data-feather="navigation"></i>
+                <div class="card-content">
+                    <h3>Aluguel de carros</h3>
+                    <p>Para os clientes que preferem explora os locais à sós e curtem a liberdade, temos o serviço de aluguel de carros com preços acessiveis.
+                    </p>
+                </div>
+                <button>Saiba mais</button>
+            </div>
+        </div>
+    </section>
+
+    <secetion class="contato">
+        <div id="map">
+
+        </div>
+    </secetion>
+
+    <!-- inserção no final da importação do icon   -->
+    <script>
+        feather.replace();
+
+        function initMap() {
+            // The location of Uluru
+            var uluru = {
+                lat: -25.344,
+                lng: 131.036
+            };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 4,
+                    center: uluru
+                });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?&callback=initMap">
+    </script>
+
+</body>
+
+</html>
